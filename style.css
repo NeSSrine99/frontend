@@ -12,6 +12,17 @@ body {
   margin-top: 85px;
 }
 
+@media (max-width: 400px) {
+  body {
+    margin-top: 60px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .container {
+    width: 80%;
+  }
+}
+
 /* CONTAINER */
 .container {
   width: 370px;
