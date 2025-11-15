@@ -11,7 +11,7 @@
       <label class="list-group-item">
         All Pages
         <div>
-          <input type="checkbox" />
+          <input id="select-all" type="checkbox" />
           <span class="custom-check"></span>
         </div>
       </label>
@@ -57,5 +57,27 @@
         <button type="button">Done</button>
       </div>
     </div>
+
+    <script>
+      const selectAll = document.querySelector("#select-all");
+      const items = document.querySelectorAll(".item-checkbox");
+
+      selectAll.addEventListener("change", () => {
+        items.forEach((cb) => (cb.checked = selectAll.checked));
+      });
+
+      items.forEach((cb) => {
+        cb.addEventListener("change", () => {
+          // If one item is unchecked → uncheck Select All
+          if (![...items].every((input) => input.checked)) {
+            selectAll.checked = false;
+          }
+          // If all items checked → check Select All
+          else {
+            selectAll.checked = true;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
