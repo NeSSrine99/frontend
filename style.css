@@ -11,3 +11,12 @@ body {
   justify-content: center;
   margin-top: 85px;
 }
+
+/* CONTAINER */
+.container {
+  width: 370px;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  padding: 10px 0;
+  box-shadow: rgba(20, 20, 20, 0.1) 0px 4px 15px;
+}
