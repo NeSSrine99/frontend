@@ -31,6 +31,47 @@ body {
   font-size: 16px;
 }
 
+/* HIDE default checkbox */
+.list-group-item input {
+  display: none;
+}
+
+/* CUSTOM BOX */
+.custom-check {
+  width: 23px;
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+/* HOVER → LIGHT CHECKMARK */
+.list-group-item:hover .custom-check::after {
+  content: "✔";
+  font-size: 14px;
+  color: #d3d3d3;
+}
+
+/* CHECKED HOVER */
+.list-group-item input:hover:checked + .custom-check {
+  background-color: #5087f8;
+  border-color: #5087f8;
+}
+
+/* CHECKED */
+.list-group-item input:checked + .custom-check {
+  background-color: #2469f6;
+  border-color: #2469f6;
+}
+
+.list-group-item input:checked + .custom-check::after {
+  content: "✔";
+  color: white;
+}
+
 /* LINE DIVIDER */
 .box-line {
   padding: 10px 15px;
@@ -38,4 +79,22 @@ body {
 
 .line {
   border: 0.7px solid #cdcdcd;
+}
+
+/* BUTTON */
+.button-box {
+  padding: 10px 15px;
+}
+
+button {
+  width: 100%;
+  background: #ffce22;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffd84d;
 }
